@@ -1,0 +1,114 @@
+POST http://localhost:3000/dev/topsecret
+Content-Type: application/json
+
+{
+"satellites": [
+     {
+       "name": "kenobi",
+       "distance": 100.0,
+       "message": ["este", "", "", "mensaje", ""]
+     },
+  {
+    "name": "skywalker",
+    "distance": 115.5,
+    "message": ["", "es", "", "", "secreto"]
+  },
+  {
+    "name": "sato",
+    "distance": 142.7,
+    "message": ["este", "", "un", "", ""]
+  }
+]
+
+}
+### Aws
+POST https://quhtf0bqs3.execute-api.us-east-1.amazonaws.com/dev/topsecret
+Content-Type: application/json
+
+{
+  "satellites": [
+    {
+      "name": "kenobi",
+      "distance": 100.0,
+      "message": ["este", "", "", "mensaje", ""]
+    },
+    {
+      "name": "skywalker",
+      "distance": 115.5,
+      "message": ["", "es", "", "", "secreto"]
+    },
+    {
+      "name": "sato",
+      "distance": 142.7,
+      "message": ["este", "", "un", "", ""]
+    }
+  ]
+
+}
+###
+POST http://localhost:3000/dev/topsecret_slice/kenobi
+Content-Type: application/json
+
+{
+  "distance": 100.0,
+  "message": ["este", "", "", "mensaje", ""]
+}
+
+###
+
+POST http://localhost:3000/dev/topsecret_slice/skywalker
+Content-Type: application/json
+
+{
+  "distance": 115.5,
+  "message": ["", "es", "", "", "secreto"]
+}
+
+###
+POST http://localhost:3000/dev/topsecret_slice/sato
+Content-Type: application/json
+
+{
+  "distance": 142.7,
+  "message": ["este", "", "un", "", ""]
+}
+
+###
+
+GET http://localhost:3000/dev/topsecret_slice
+Content-Type: application/json
+
+###
+
+###
+POST https://quhtf0bqs3.execute-api.us-east-1.amazonaws.com/dev/topsecret_slice/sato
+Content-Type: application/json
+
+{
+  "distance": 142.7,
+  "message": ["este", "", "un", "", ""]
+}
+
+###
+POST https://quhtf0bqs3.execute-api.us-east-1.amazonaws.com/dev/topsecret_slice/kenobi
+Content-Type: application/json
+
+{
+  "distance": 100.0,
+  "message": ["este", "", "", "mensaje", ""]
+}
+
+###
+
+POST https://quhtf0bqs3.execute-api.us-east-1.amazonaws.com/dev/topsecret_slice/skywalker
+Content-Type: application/json
+
+{
+  "distance": 115.5,
+  "message": ["", "es", "", "", "secreto"]
+}
+
+
+###
+GET https://quhtf0bqs3.execute-api.us-east-1.amazonaws.com/dev/topsecret_slice/
+Content-Type: application/json
